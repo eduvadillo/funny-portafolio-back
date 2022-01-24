@@ -20,11 +20,7 @@ module.exports = (app) => {
   app.set("trust proxy", 1);
 
   // controls a very specific header to pass headers from the frontend
-  app.use(
-    cors({
-      origin: process.env.ORIGIN || "https://edu-vadillo-portafolio.herokuapp.com",
-    })
-  );
+  app.use(cors());
 
   // In development environment the app logs
   app.use(logger("dev"));
