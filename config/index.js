@@ -22,7 +22,10 @@ module.exports = (app) => {
   // controls a very specific header to pass headers from the frontend
   app.use(
     cors({
-      origin: process.env.ORIGIN || "https://edu-vadillo-portafolio.herokuapp.com",
+      origin:
+        process.env.ORIGIN ||
+        "https://edu-vadillo-portafolio.herokuapp.com" ||
+        "https://eduvadillo-portafolio.netlify.app",
     })
   );
 
